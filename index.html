@@ -5,33 +5,109 @@
   <title>Team Beban</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive;
-      background-color: #fff5f5;
+      background-color: #fff3cd;
+      font-family: Arial, sans-serif;
       text-align: center;
       padding: 50px;
     }
+
     h1 {
       font-size: 48px;
-      color: #d10000;
+      color: #ff5722;
+      margin-bottom: 10px;
     }
-    p {
-      font-size: 24px;
-      color: #444;
+
+    .subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
     }
-    img {
+
+    .team {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .member {
+      background-color: #ffffff;
+      border: 2px dashed #ff9800;
+      border-radius: 15px;
+      padding: 20px;
       width: 200px;
-      margin-top: 30px;
+      box-shadow: 4px 4px 0 #ffc107;
     }
-    .caption {
-      font-style: italic;
-      color: #888;
+
+    .name {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px #c62828;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #222;
     }
   </style>
 </head>
 <body>
-  <h1>Team Beban 🤡</h1>
-  <p>Kami tidak menyelesaikan masalah, kami bagian dari masalah 😎</p>
-  <img src="https://i.imgur.com/OQ8CzJP.png" alt="beban" />
-  <div class="caption">Selamat datang di web paling tidak membantu di dunia!</div>
+
+  <h1>Team Beban</h1>
+  <div class="subtitle">Satu tim, satu visi: Nggak ngapa-ngapain 😎</div>
+
+  <div class="team">
+    <div class="member">
+      <div class="name">benks bot</div>
+      <div class="desc">benks bot kontol</div>
+    </div>
+    <div class="member">
+      <div class="name">🎮 ryel guguk</div>
+      <div class="desc">bot beban</div>
+    </div>
+    <div class="member">
+      <div class="name">cina si pro</div>
+      <div class="desc">pro gg</div>
+    </div>
+  </div>
+
+  <button onclick="pushBeban()">Push Beban</button>
+
+  <div id="status"></div>
+
+  <script>
+    function pushBeban() {
+      const status = document.getElementById("status");
+      const quotes = [
+        "benks bot banget ",
+        "ryel guguk bot ",
+        "cina si pro",
+        "pitoo jagoo",
+      ];
+      const random = quotes[Math.floor(Math.random() * quotes.length)];
+      status.innerText = random;
+    }
+  </script>
+
 </body>
 </html>
